@@ -1,3 +1,132 @@
 // ==========================================================================
-// Layout / Homepage
+// Section / Homepage
 // ==========================================================================
+
+.banner {
+	background-image:url('/assets/img/banners/main.jpg');
+	background-position:center;
+	height:500px;
+
+	&::after {
+		content:'';
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:100%;
+	    background:-webkit-linear-gradient(rgba(0,0,0,.75) 0%, rgba(0,0,0,0.35) 15%, rgba(0,0,0,0) 35%);
+	    background:-o-linear-gradient(rgba(0,0,0,.75) 0%, rgba(0,0,0,0.35) 15%, rgba(0,0,0,0) 35%);
+	    background:linear-gradient(rgba(0,0,0,.75) 0%, rgba(0,0,0,0.35) 15%, rgba(0,0,0,0) 35%);
+	}
+}
+
+.nav {
+	box-shadow:0px 2px 8px 4px rgba($color-black, .10);
+	z-index:1;
+
+	nav {
+		@media screen and (max-width:768px) {
+			flex-direction:column;
+		}
+	}
+
+	a {
+		@media screen and (max-width:768px) {
+			font-size:16px;
+			text-align:center;
+			padding:20px;
+		}
+
+		font-size:20px;
+		font-weight:$weight-semibold;
+		color:$color-dark-gray;
+		text-transform:uppercase;
+		padding:35px;
+		display:inline-block;
+
+		&:hover {
+			color:$color-white;
+			background-color:$color-primary;
+		}
+	}
+}
+
+.jumbo {
+	@media screen and (max-width:768px) {
+		height:auto;
+		padding:45px 15px;
+	}
+
+	background-color:$color-light-gray;
+	height:685px;
+
+	.row {
+		@media screen and (max-width:768px) {
+			height:auto;
+		}
+
+		height:685px;
+		margin:auto;
+		align-items:center;
+	}
+
+	img {
+		@media screen and (max-width:768px) {
+			width:60px;
+		}
+
+		width:90px;
+		margin-bottom:30px;
+	}
+}
+
+.hotdogs {
+
+	.block {
+		@media screen and (max-width:768px) {
+			padding:60px;
+		}
+
+		padding:130px;
+		width:100%;
+		background-color:$color-white;
+		
+		h4 {
+			position:relative;
+			
+			&::before {
+				@media screen and (max-width:768px) {
+					content:none;
+				}
+
+				content:'';
+				position:absolute;
+				top:0;
+				left:0;
+				transform:translate3d(-50px, 13px, 0);
+				height:2px;
+				width:30px;
+				background-color:$color-primary;
+			}
+		}
+	}
+
+	.image {
+		@media screen and (max-width:768px) {
+			height:400px;
+		}
+
+		height:575px;
+		background-position:center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+
+	.reverse {
+		@media screen and (max-width:1024px) {
+			order:-1;
+		}
+	}
+}

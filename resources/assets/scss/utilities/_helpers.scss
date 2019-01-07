@@ -1,0 +1,49 @@
+.flex {
+	display:flex;
+
+	&.justify {
+		&-center {
+			justify-content:center;
+		}
+
+		&-start {
+			justify-content:flex-start;
+		}
+
+		&-end {
+			justify-content:flex-end;
+		}
+
+		&-between {
+			justify-content:space-between;
+		}
+	}
+
+	&.align {
+		&-center {
+			align-items:center;
+		}
+
+		&-start {
+			align-items:flex-start;
+		}
+
+		&-end {
+			align-items:flex-end;
+		}
+	}
+}
+
+.text {
+	&-left {
+		text-align:left;
+	}
+
+	&-center {
+		text-align:center;
+	}
+
+	&-right {
+		text-align:right;
+	}
+}

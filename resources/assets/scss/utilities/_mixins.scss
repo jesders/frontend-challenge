@@ -1,0 +1,27 @@
+@mixin createCells() {
+  @each $key, $value in $grid-breakpoints {
+    @media screen and (min-width:$value){
+      @for $i from 1 through $grid-columns {
+        &.#{$key}-#{$i}{
+          width:(100 / ($grid-columns / $i) * 1%);
+        }
+      }  
+    }
+  }
+}
+
+@mixin createRows() {
+	@each $key, $value in $grid-containers {
+		&.#{$key} {
+			max-width:#{$value};
+		}	
+	}
+}
+
+@mixin createButtonSizes() {
+  @each $key, $value in $button-sizes {
+    &.#{$key} {
+      width:#{$value};
+    } 
+  }
+}

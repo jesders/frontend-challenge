@@ -1,0 +1,23 @@
+.container {
+	position:relative;
+}
+
+.row {
+	@include createRows;
+
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.cell {
+	@include createCells;
+	
+	flex-basis:auto;
+	flex-grow:0;
+	flex-shrink:0;
+	width:100%;
+
+	&.shrink {
+		width:auto;
+	}
+}

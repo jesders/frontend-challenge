@@ -1,0 +1,6 @@
+#Vagrant Specific
+.vagrant
+Vagrantfile
+
+#Node Specific
+node_modules

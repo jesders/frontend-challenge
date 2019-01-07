@@ -11,13 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public_html/wp-content/themes/{% project_name %}/assets/js')
-	.sass('resources/assets/sass/app.scss', 'public_html/wp-content/themes/{% project_name %}/assets/css')
-	.browserSync({
-		proxy: 'localhost:8001',
-		files: [
-			'public_html/wp-content/themes/**/*',
-			'resources/assets/**/*'
-		]
+mix.sass('resources/assets/scss/app.scss', 'public_html/assets/css')
+mix.browserSync({
+	proxy: 'localhost:8005',
+	files: [
+		'public_html/*',
+		'resources/assets/**/*'
+	]
 });
 
